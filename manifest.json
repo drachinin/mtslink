@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "МТС Линк — автоподтверждение",
+  "version": "1.0.0",
+  "description": "Автоматически нажимает «Подтверждаю» в окне контроля присутствия.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.mts-link.ru/*",
+        "https://*.webinar.ru/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
